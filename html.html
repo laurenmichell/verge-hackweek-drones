@@ -1,4 +1,12 @@
-&lt;!DOCTYPE html&gt;
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {font-family:courier;font-size:10px;}
+    </style>
+  </head>
+  <body>
+ &lt;!DOCTYPE html&gt;
 &lt;html style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
   &lt;head style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
     &lt;title style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;Verge Newsletter | {date('MMM dd, yyyy')} &lt;/title&gt;
@@ -576,3 +584,49 @@
 
   &lt;/body&gt;
 &lt;/html&gt;
+
+
+
+<script type="text/javascript" src="handlebars.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="tabletop.js"></script>
+
+    <script type="text/javascript">
+      var public_spreadsheet_url = "https://docs.google.com/spreadsheet/pub?key=0Audl93NY80BvdDNUdWJtWUJOb2FNVmFXSEo4eVJOVWc&output=html";
+
+      $(document).ready( function() {
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         parseNumbers: true } );
+      });
+        
+      function showInfo(data, tabletop) {
+        
+        var source3   = $("#editorsnote").html();
+        var template3 = Handlebars.compile(source3);
+
+        var source   = $("#featuredstories").html();
+        var template = Handlebars.compile(source);
+
+        var source2   = $("#storylist").html();
+        var template2 = Handlebars.compile(source2);
+
+          $.each( tabletop.sheets("editorsnote").all(), function(i, newsletter3) {
+          var html = template3(newsletter3);
+          $("#editorsnote-content").append(html);
+        });
+
+        $.each( tabletop.sheets("featuredstories").all(), function(i, newsletter) {
+          var html = template(newsletter);
+          $("#featuredstories-content").append(html);
+        });
+
+         $.each( tabletop.sheets("storylist").all(), function(i, newsletter2) {
+          var html = template2(newsletter2);
+          $("#storylist-content").append(html);
+        });
+
+      }
+     
+    </script>
+</body></html>

@@ -223,49 +223,6 @@
     &lt;/table&gt;
   &lt;/center&gt;
 
-    &lt;script type=&quot;text/javascript&quot; src=&quot;handlebars.js&quot;&gt;&lt;/script&gt;
-    &lt;script type=&quot;text/javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
-    &lt;script type=&quot;text/javascript&quot; src=&quot;tabletop.js&quot;&gt;&lt;/script&gt;
-
-    &lt;script type=&quot;text/javascript&quot;&gt;
-      var public_spreadsheet_url = &quot;https://docs.google.com/spreadsheet/pub?key=0Audl93NY80BvdDNUdWJtWUJOb2FNVmFXSEo4eVJOVWc&amp;output=html&quot;;
-
-      $(document).ready( function() {
-        Tabletop.init( { key: public_spreadsheet_url,
-                         callback: showInfo,
-                         parseNumbers: true } );
-      });
-        
-      function showInfo(data, tabletop) {
-        
-        var source3   = $(&quot;#editorsnote&quot;).html();
-        var template3 = Handlebars.compile(source3);
-
-        var source   = $(&quot;#featuredstories&quot;).html();
-        var template = Handlebars.compile(source);
-
-        var source2   = $(&quot;#storylist&quot;).html();
-        var template2 = Handlebars.compile(source2);
-
-          $.each( tabletop.sheets(&quot;editorsnote&quot;).all(), function(i, newsletter3) {
-          var html = template3(newsletter3);
-          $(&quot;#editorsnote-content&quot;).append(html);
-        });
-
-        $.each( tabletop.sheets(&quot;featuredstories&quot;).all(), function(i, newsletter) {
-          var html = template(newsletter);
-          $(&quot;#featuredstories-content&quot;).append(html);
-        });
-
-         $.each( tabletop.sheets(&quot;storylist&quot;).all(), function(i, newsletter2) {
-          var html = template2(newsletter2);
-          $(&quot;#storylist-content&quot;).append(html);
-        });
-
-      }
-     
-    &lt;/script&gt;
-
     &lt;link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'&gt;
       &lt;link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'&gt;
       &lt;style type=&quot;text/css&quot;&gt;

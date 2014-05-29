@@ -12,7 +12,7 @@
   &lt;/head&gt;
 
 
-  &lt;body style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+  &lt;body yahoo=&quot;fix&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
   &lt;center style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
     &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; height=&quot;100%&quot; width=&quot;100%&quot; id=&quot;bodyMain&quot; class=&quot;mainTable stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
       &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
@@ -503,30 +503,30 @@
         padding:0px 5px;
       }
 
-    @media screen and (max-width: 480px) {
-              table {
+    @media only screen and (max-width: 480px) {
+              body[yahoo] table {
                 width: 320px !important;
               }
-              table .stack{
+              body[yahoo] table .stack{
                 width: 320px !important;
                 display:block;
               }
-              .mobilehide {
+              body[yahoo] .mobilehide {
                 display:none;
               }
-              .newsletterIntro p {
+              body[yahoo] .newsletterIntro p {
                   width:100%;
                   display:block;
                   border-right:0px;
                 }
-              .storiesPost {
+              body[yahoo] .storiesPost {
                 width:290px;
               }
-              .storiesPush{
+              body[yahoo] .storiesPush{
                 padding:0px;
                 margin:0px;
               }
-              .newsletterIntroAd {
+              body[yahoo] .newsletterIntroAd {
                 padding:0px;
                 margin:0px 0px 20px 0px;
                 width:100%;

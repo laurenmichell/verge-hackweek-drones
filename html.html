@@ -111,13 +111,21 @@
                             &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;longformPost stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 10px 5px 20px 15px;font-family: 'helvetica', 'arial', sans-serif;width: 65%;&quot;&gt;
                               {{! only output this if harmony is yes }}
                                 {{#if harmony}}
-                                  &lt;p class=&quot;sponsor_label&quot; style="background:#999;color:#fff;text-transform:uppercase; font-weight:bold; text-align:center; font-size:10px!important;display:inline;padding:3px 5px;"&gt;From our sponsor&lt;/p&gt;
+                                  &lt;p class=&quot;sponsor_label&quot; style="background:#999;color:#fff;text-transform:uppercase; font-weight:bold; text-align:center; font-size:10px!important;display:inline-block;margin-bottom:10px!important;padding:3px 5px;"&gt;From our sponsor&lt;/p&gt;
                                 {{/if}}
-                              &lt;h3 style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;a href=&quot;{{featuredurl}}&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'Roboto Slab', serif;font-size: 22px;font-weight: normal;color: #000;text-decoration: none;&quot;&gt;{{featuredhed}}&lt;/a&gt; 
+                              &lt;h3 style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;line-height:25px;&quot;&gt;&lt;a href=&quot;{{featuredurl}}&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'Roboto Slab', serif;font-size: 22px;font-weight: normal;color: #000;text-decoration: none;&quot;&gt;{{featuredhed}}&lt;/a&gt; 
                               &lt;/h3&gt;
                                {{#if harmony}}
-                                &lt;p class=&quot;from_sponsor&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 3px 0px;font-family: 'helvetica', 'arial', sans-serif;color: #333;font-weight: bold;font-size: 12px !important;line-height: 20px;&quot;&gt; Powered by Vox Creative &lt;span style=&quot;margin: 0px 0px 0px 0px;padding: 0px 5px;font-family: 'helvetica', 'arial', sans-serif;font-weight: normal;color: #666;&quot;&gt;| &lt;span style="width:175px;!important;display:inline-block;position:relative!important;top:7px!important;"&gt;{include "BTF Sponsored Title Bar"}&lt/span&gt; &lt;/span&gt; 
-                                  
+                              &lt;table&gt;
+                                &lt;tr&gt;
+                                   &lt;td style=&quot;width:50%;&quot;&gt;
+                                      &lt;span class=&quot;from_sponsor&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 3px 0px;font-family: 'helvetica', 'arial', sans-serif;color: #333;font-weight: bold;font-size: 12px !important;line-height: 20px;&quot;&gt; Powered by Vox Creative &lt;/span&gt;
+                                   &lt;/td&gt;
+                                   &lt;td style=&quot;width:50%;&quot;&gt;
+                                      {include &quot;BTF Sponsored Title Bar&quot;}
+                                   &lt;/td&gt;
+                                 &lt;/tr&gt;
+                              &lt;/table&gt;        
                               {{/if}}
                               &lt;p style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;font-size: 14px;line-height: 20px;&quot;&gt;
                                 {{featuredblurb}}

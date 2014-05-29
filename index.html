@@ -36,7 +36,7 @@
                             <h1></h1>
                           </td>
                           <td align="right" valign="middle" class="sponsorLogo">
-                            <img src="http://laurenrabaino.com/verge/newsletter/stb.png" alt="Intel"> <!-- LOGO IMAGE FOR SPONSOR -->
+                            <img src="http://laurenrabaino.com/verge/newsletter/stb.png" alt="Intel">
                           </td>
                         </tr>
                       </table>
@@ -62,7 +62,7 @@
                             <h2>YOU NEED TO READ THIS NOW</h2>
                           </td>
                           <td align="right" valign="top" class="newsletterIntro mobilehide">
-                            <h2>[Monday, day YEAR]</h2>
+                            <h2></h2>
                           </td>
                         </tr>
                         <tr>
@@ -113,13 +113,13 @@
                             <td align="left" valign="top" class="longformPost stack">
                               <p> {{! only output this if harmony is yes }}
                                     {{#if harmony}}
-                                      <img src="http://laurenrabaino.com/verge/newsletter/stb.png" style="width:150px;height:14px;"/>
+                                      <p class="sponsor_label">From our sponsor</p>
                                     {{/if}}
                               </p>
                               <h3><a href="{{featuredurl}}">{{featuredhed}}</a> 
                               </h3>
                                {{#if harmony}}
-                                <p class="from_sponsor">From our sponsor <span>|</span> Powered by Vox Creative</p>
+                                <p class="from_sponsor">Powered by Vox Creative <span>|</span>  <img src="http://laurenrabaino.com/verge/newsletter/stb.png" style="width:150px;height:14px;"/></p>
                               {{/if}}
                               <p>
                                 {{featuredblurb}}
@@ -544,6 +544,17 @@
         font-weight:normal;
         color:#666;
         padding:0px 5px;
+      }
+      .sponsor_label {
+        background:#999;
+        color:#fff;
+        text-transform:uppercase;
+        font-weight:bold;
+        text-align:center;
+        font-size:10px!important;
+        display:inline;
+        padding:3px 5px;
+
       }
 
     @media screen and (max-width: 480px) {

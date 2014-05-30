@@ -81,10 +81,13 @@
                                         <h1><a href="{{leadlink}}">{{leadhed}}</a></h1>
                                           <p>{{leadsummary}}</p>
                                         {{/if}}
-                                  </script>
+                                 
+                                  {{#if advertisementon}}
                                   <center style="margin:0px auto; width:300px;">
                                       <small style="margin: 20px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif; color: #999; border-bottom: 1px solid #ccc; display: block; padding-bottom: 10px; font-size: 11px;">ADVERTISEMENT</small><br style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif;" /><table style="width:300px!important; margin:0px auto;" width="300">  <img class="newsletterIntroAd" src="mercedes_300x250.jpg" width="300" align="center"/><br/><br/>
                                     </center></table>
+                                    {{/if}}
+                                  </script>
                                 </td>
                               </tr>
                             </table>
@@ -161,17 +164,23 @@
                             </p>
                           </td>
                         </tr>
-                      </script>
+                    </script>
 
                       </table>
                     </td>
                   </tr>
-                  
+                  <div id="bottomad-content"></div>
+                  <script id="bottomad" type="text/x-handlebars-template">
+                  {{#if advertiseon}}
                   <tr class="stack">
                     <td align="left" valign="top" colspan="2" class="ad_3">
                       <center style="width:300px; margin:0px auto;"><small style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif; color: #999; border-bottom: 1px solid #ccc; display: block; padding-bottom: 10px; font-size: 11px;">ADVERTISEMENT</small><br style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif;" /><table style="width:300px!important; margin:0px auto;" width="300"><img src="mercedes_300x250.jpg" width="300" style="width:300px;"/></table></center>
                     </td>
                   </tr>
+                  {{/if}}
+                  </script>
+                  
+                    
                   <tr>
                     <td align="left" valign="top" class="ad_3">
 
@@ -247,14 +256,17 @@
         
       function showInfo(data, tabletop) {
         
-        var source3   = $("#editorsnote").html();
-        var template3 = Handlebars.compile(source3);
-
         var source   = $("#featuredstories").html();
         var template = Handlebars.compile(source);
 
         var source2   = $("#storylist").html();
         var template2 = Handlebars.compile(source2);
+
+         var source3   = $("#editorsnote").html();
+        var template3 = Handlebars.compile(source3);
+
+        var source4   = $("#bottomad").html();
+        var template4 = Handlebars.compile(source4);
 
           $.each( tabletop.sheets("editorsnote").all(), function(i, newsletter3) {
           var html = template3(newsletter3);
@@ -269,6 +281,11 @@
          $.each( tabletop.sheets("storylist").all(), function(i, newsletter2) {
           var html = template2(newsletter2);
           $("#storylist-content").append(html);
+        });
+
+          $.each( tabletop.sheets("bottomad").all(), function(i, newsletter4) {
+          var html = template4(newsletter4);
+          $("#bottomad-content").append(html);
         });
 
       }

@@ -169,25 +169,24 @@
                       </table>
                     </td>
                   </tr>
-                  <div id="bottomad-content"></div>
-                  <script id="bottomad" type="text/x-handlebars-template">
-                  {{#if advertiseon}}
-                  <tr class="stack">
-                    <td align="left" valign="top" colspan="2" class="ad_3">
-                      <center style="width:300px; margin:0px auto;"><small style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif; color: #999; border-bottom: 1px solid #ccc; display: block; padding-bottom: 10px; font-size: 11px;">ADVERTISEMENT</small><br style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif;" /><table style="width:300px!important; margin:0px auto;" width="300"><img src="mercedes_300x250.jpg" width="300" style="width:300px;"/></table></center>
-                    </td>
-                  </tr>
-                  {{/if}}
-                  </script>
                   
                     
                   <tr>
-                    <td align="left" valign="top" class="ad_3">
-
+                    <td align="center" valign="top" class="ad_3 stack">
+                      <div id="bottomad-content"></div>
+                      <script id="bottomad" type="text/x-handlebars-template">
+                      {{#if advertiseon}}
+                      {{advertiseon}}
+                      <tr class="stack">
+                        <td align="left" valign="top" colspan="2" class="ad_3">
+                          <center style="width:300px; margin:0px auto;"><small style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif; color: #999; border-bottom: 1px solid #ccc; display: block; padding-bottom: 10px; font-size: 11px;">ADVERTISEMENT</small><br style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif;" /><table style="width:300px!important; margin:0px auto;" width="300"><img src="mercedes_300x250.jpg" width="300" style="width:300px;"/></table></center>
+                        </td>
+                      </tr>
+                      {{/if}}
+                      </script>
+                      
                     </td>
-                    <td align="left" valign="top" class="ad_3">
-
-                    </td>
+                  
                   </tr>
                   <tr>
                     <td align="center" valign="top" class="horizontalRule stack">
@@ -268,22 +267,22 @@
         var source4   = $("#bottomad").html();
         var template4 = Handlebars.compile(source4);
 
-          $.each( tabletop.sheets("editorsnote").all(), function(i, newsletter3) {
-          var html = template3(newsletter3);
-          $("#editorsnote-content").append(html);
-        });
-
         $.each( tabletop.sheets("featuredstories").all(), function(i, newsletter) {
           var html = template(newsletter);
           $("#featuredstories-content").append(html);
         });
 
-         $.each( tabletop.sheets("storylist").all(), function(i, newsletter2) {
+        $.each( tabletop.sheets("storylist").all(), function(i, newsletter2) {
           var html = template2(newsletter2);
           $("#storylist-content").append(html);
         });
 
-          $.each( tabletop.sheets("bottomad").all(), function(i, newsletter4) {
+        $.each( tabletop.sheets("editorsnote").all(), function(i, newsletter3) {
+          var html = template3(newsletter3);
+          $("#editorsnote-content").append(html);
+        });
+
+        $.each( tabletop.sheets("bottomad").all(), function(i, newsletter4) {
           var html = template4(newsletter4);
           $("#bottomad-content").append(html);
         });

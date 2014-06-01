@@ -77,12 +77,15 @@
                                         &lt;h1 style=&quot;margin: 0px 0px 0px 0px;padding: 20px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;line-height: 28px;&quot;&gt;&lt;a href=&quot;{{leadlink}}&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'Roboto Slab', serif;font-weight: bold;color: #000;text-decoration: none;font-size: 26px;&quot;&gt;{{leadhed}}&lt;/a&gt;&lt;/h1&gt;
                                           &lt;p style=&quot;margin: 10px 10px 0px 0px;padding: 0px 0px 15px 0px;font-family: 'helvetica', 'arial', sans-serif;font-size: 18px;line-height: 25px;&quot;&gt;{{leadsummary}}&lt;/p&gt;
                                         {{/if}}
-                                  </script>
+                                  {{#if advertisementon}}
                                   &lt;center style=&quot;margin: 0px auto;width:300px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
                                       &lt;small style=&quot;margin: 20px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif; color: #999; border-bottom: 1px solid #ccc; display: block; padding-bottom: 10px; font-size: 11px;&quot;&gt;ADVERTISEMENT&lt;/small&gt;&lt;br style=&quot;margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;table style=&quot;width: 300px!important;margin: 0px auto;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot; width=&quot;300&quot;&gt;  
                                        {include "ATF Med Rec"}
                                       &lt;br style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;br style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
-                                    &lt;/table&gt;&lt;/center&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+                                    &lt;/table&gt;&lt;/center&gt;
+                                    {{/if}}
+                                    </script>
+                                    &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
                                 &lt;/td&gt;
                               &lt;/tr&gt;
                             &lt;/table&gt;
@@ -173,7 +176,9 @@
                       &lt;/table&gt;
                     &lt;/td&gt;
                   &lt;/tr&gt;
-                  
+                  <div id="bottomad-content"></div>
+                  <script id="bottomad" type="text/x-handlebars-template">
+                  {{#if advertiseon}}
                   &lt;tr class=&quot;stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
                     &lt;td align=&quot;left&quot; valign=&quot;top&quot; colspan=&quot;2&quot; class=&quot;ad_3&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
                       &lt;center style=&quot;margin: 0px auto;width:300px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;small style=&quot;margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif; color: #999; border-bottom: 1px solid #ccc; display: block; padding-bottom: 10px; font-size: 11px;&quot;&gt;ADVERTISEMENT&lt;/small&gt;&lt;br style=&quot;margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;table style=&quot;width: 300px!important;margin: 0px auto;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot; width=&quot;300&quot;&gt;
@@ -181,6 +186,8 @@
                       &lt;/table&gt;&lt;/center&gt;
                     &lt;/td&gt;
                   &lt;/tr&gt;
+                  {{/if}}
+                  </script>
                   &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
                     &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;ad_3&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
 
@@ -574,6 +581,9 @@
         var source2   = $("#storylist").html();
         var template2 = Handlebars.compile(source2);
 
+        var source4   = $("#bottomad").html();
+        var template4 = Handlebars.compile(source4);
+
           $.each( tabletop.sheets("editorsnote").all(), function(i, newsletter3) {
           var html = template3(newsletter3);
           $("#editorsnote-content").append(html);
@@ -587,6 +597,11 @@
          $.each( tabletop.sheets("storylist").all(), function(i, newsletter2) {
           var html = template2(newsletter2);
           $("#storylist-content").append(html);
+        });
+
+          $.each( tabletop.sheets("bottomad").all(), function(i, newsletter4) {
+          var html = template4(newsletter4);
+          $("#bottomad-content").append(html);
         });
 
       }

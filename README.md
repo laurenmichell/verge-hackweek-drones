@@ -107,20 +107,20 @@ If you want editors/producers to have a persistent place through which to previe
 
 ## Resources
 
-### Guides:
+#### Guides
 - Responsive email design best practices: http://www.campaignmonitor.com/guides/mobile/
 - Email marketing field guide: http://mailchimp.com/resources/guides/email-marketing-field-guide/
 
-### Tools:
+#### Tools
 - Mailchimp inliner tool (useful for the html.html page): http://templates.mailchimp.com/resources/inline-css/
 - Converting HTML entities (useful for the html.html page): http://htmlentities.net/
 - Test multiple third-party browsers (we don't currently pay for this): https://litmus.com/
 
-## Compatibility: 
+#### Compatibility 
 - Which email clients support media queries? https://litmus.com/help/email-clients/media-query-support/
 - Which email clients support web fonts? http://www.campaignmonitor.com/resources/will-it-work/webfonts/
 
-### Troubleshooting:
+#### Troubleshooting
 - Yahoo Mail sucks: http://www.emailonacid.com/blog/details/C13/stop_yahoo_mail_from_rendering_your_media_queries
 
 

@@ -94,6 +94,9 @@ This page displays the plain text, stripped-down version of the email. This shou
 
 # Resources
 - Yahoo Mail sucks: http://www.emailonacid.com/blog/details/C13/stop_yahoo_mail_from_rendering_your_media_queries
+- Which email clients support media queries? https://litmus.com/help/email-clients/media-query-support/
+- Which email clients support web fonts? http://www.campaignmonitor.com/resources/will-it-work/webfonts/
+- Responsive email design best practices: http://www.campaignmonitor.com/guides/mobile/
 - Mailchimp inliner tool (useful for the html.html page): http://templates.mailchimp.com/resources/inline-css/
 - Converting HTML entities (useful for the html.html page): http://htmlentities.net/
 

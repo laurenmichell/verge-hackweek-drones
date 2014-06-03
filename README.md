@@ -19,13 +19,24 @@ This sheet powers the top section of the newsletter, above the first ad. If the 
 
 Columns:
 
- - **editorsnote:** If populated with *any value*, the editor's note markup displays; if empty, editor's note markup does not display.- **leadhed:** Plain text for the headline of the lead story
+ - **editorsnote:** If populated with *any value*, the editor's note markup displays; if empty, editor's note markup does not display.
+ - **leadhed:** Plain text for the headline of the lead story
  - **leadlink:** URL for the lead story, which will wrap around the lead image and headline.
  - **leadimageurl:** Image URL for the lead image. Grabbed from Chorus. 
  - **leadsummary:** Blurb that goes with lead story.
  - **advertisementon:** If populated with *any value*, the markup for the top advertisement will display; if empty, markup will not display. 
 
-### Sheet: 
+### Sheet: featured stories
+
+This sheet powers the middle section containing three big stories, one of which will occassionally be a Harmony sponsored post. 
+
+Columns:
+
+- **featuredhed:** Headlines for the featured stories go in this column. 
+- **featuredurl:** URL for features stories go in this column. 
+- **featuredimgurl:** URL for featured stories goes here. This is grabbed from Chorus. 
+- **featuredblurb:** Hand-crafted blurb for featured stories goes here.
+- **harmony:** If populated with *any value*, the corresponding story in that row will get a 'FROM OUR SPONSOR' label, a 'Powered by Vox Creative' byline and a right-aligned sponsored title bar. 
 
 # Pages
 

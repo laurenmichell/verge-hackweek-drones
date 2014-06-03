@@ -8,7 +8,7 @@ This is a temporary bandaid tool created by Lauren to help editorial generate ne
 
 # Set up
 
-## Create the Google spreadsheet
+## 1. Create the Google spreadsheet
 Create a Google doc that will serve as the lightweight database to power the content of the email newsletter. Each column of the spreadsheet will represent a variable that the template loops over to populate the newsletter. 
 
 The Verge's newsletter is set up with the following sheets and columns:
@@ -57,8 +57,13 @@ Columns:
 
 - **advertiseon:** If populated with *any* value, markup for displaying ad will render in markup. If empty, ad will not display. 
 
+## 2. Publish spreadsheet. 
 
-# Pages
+For tabletop/handlebars to access data from the spreadsheet, it needs to be publishing to the web. To make the sheet public, go to `File > Publish to the web > All sheets > Start publishing`. 
+
+Copy the link to the published data, which you will use in `index.html`, `html.hml` and `plaintext.html` in the next step. 
+
+# 3. Pages
 
 ## index.html
 This page is what displays the preview of the newsletter and provides HTML and plain text markup for editorial to paste into sailthru.

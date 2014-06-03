@@ -1,8 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--
+        
+        Hello! This page is the html.html page, which will display on your index.html page. 
+        It references the same Google Spreadsheet by ID as the index.html page. It references
+        the same variables for each column as index.html.
+
+        The biggest difference is that, because this page is meant to generate code that can be
+        copied/pasted into Sailthru's code tab and is meant to then redner code that displays
+        in all email clients:
+
+           (1) The HTML source is encoded so that the code can be copied/pasted as HTML rather 
+               render as markup. 
+           (2) All styles are displayed inline within the individual elements themselves. The
+               reason for this is because most email clients only support inline styles, not 
+               styles that are in <style> tags. Please see the README for more information. 
+
+    -->
     <style>
-      body {font-family:courier;font-size:10px;}
+      /*these styles are just to make it more visually obvious that this page is code that should be copied/pasted into Sailthru.*/
+      body {font-family:courier;font-size:10px;} 
     </style>
   </head>
   <body>

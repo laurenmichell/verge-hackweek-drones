@@ -82,6 +82,13 @@ Notes:
 ## html.html
 This page displays the encoded html, which will render decoded so it can be copied/pasted into sailthru. 
 
+You need to do three specific steps to generate the markup for this page: 
+
+1. Run your source code from index.html (excluding the iframe embed section at the top) through MailChimp's CSS inliner tool: http://templates.mailchimp.com/resources/inline-css/. The reason for this is because, as you will quickly learn, most email clients only work if the styles are inline. Keep the style tags as well, for the media queries. 
+2. After you've run your source code through the inliner, then run it through the HTML encoder at http://htmlentities.net/. This is because when the content displays in the iframe "grab this code" box, we don't want it to render the html, we want the source code to display. So you have to encode all your code. 
+3. Go through and add all the correct tabletop.js variables, includes, etc. that you did for `index.html` so that upon render, the actual content will show up instead of tabletop variables. 
+
+
 ## plaintext.html
 This page displays the plain text, stripped-down version of the email. 
 

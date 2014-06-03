@@ -1,10 +1,31 @@
 # Overview
-This is a janky tool created by Lauren to help editorial generate newsletters (HTML and plain text) via a Google Spreadsheet. 
+This is a temporary bandaid tool created by Lauren to help editorial generate newsletters (HTML and plain text) via a Google Spreadsheet. 
 
 # Dependencies
  - jQuery: http://jquery.com/
  - tabletop.js: https://github.com/jsoma/tabletop
  - handlebars.js: http://handlebarsjs.com/
+
+# Set up
+
+## Create the Google spreadsheet
+Create a Google doc that will serve as the lightweight database to power the content of the email newsletter. Each column of the spreadsheet will represent a variable that the template loops over to populate the newsletter. 
+
+The Verge's newsletter is set up with the following sheets and columns:
+
+### Sheet: editorsnote
+
+This sheet powers the top section of the newsletter, above the first ad. If the editor's note is present, it will display. If the editor's not is empty, the markup will not display. It is also the sheet that controls the content of the lead story. 
+
+Columns:
+
+ - **editorsnote:** If populated with *any value*, the editor's note markup displays; if empty, editor's note markup does not display.- **leadhed:** Plain text for the headline of the lead story
+ - **leadlink:** URL for the lead story, which will wrap around the lead image and headline.
+ - **leadimageurl:** Image URL for the lead image. Grabbed from Chorus. 
+ - **leadsummary:** Blurb that goes with lead story.
+ - **advertisementon:** If populated with *any value*, the markup for the top advertisement will display; if empty, markup will not display. 
+
+### Sheet: 
 
 # Pages
 

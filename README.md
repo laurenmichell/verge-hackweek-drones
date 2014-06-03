@@ -63,13 +63,24 @@ For tabletop/handlebars to access data from the spreadsheet, it needs to be publ
 
 Copy the link to the published data, which you will use in `index.html`, `html.hml` and `plaintext.html` in the next step. 
 
-# 3. Pages
+# 3. Creating your template.
+
+After your email newsletter markup has been written and throughly tested in multiple email browsers, you can create various versions of it that will power this tool. 
 
 ## index.html
-This page is what displays the preview of the newsletter and provides HTML and plain text markup for editorial to paste into sailthru.
+This page is what displays the preview of the newsletter and provides HTML and plain text markup for editorial to paste into sailthru. The contents of it will actually never go into the email newsletter, but it gives editors/producers a visual way of seeing the content that they've entered into the spreadsheet in an actual marked up display that's closely representative of how the email newsletter itself will display. 
+
+The top of this page contains two iframes: one that displays the contents of `html.html`, which is the markup that will be pasted into the code view of the sailthru template/campaign; one that displays the contents of `plaintext.html` which goes into the plaintext tab of the template/campaign. 
+
+Notes:
+
+- After you have marked up this page fully with dummy content, follow the [documentation for tabletop.js](https://github.com/jsoma/tabletop) to get the variables from your spreadsheet to render within the template. 
+- It's usually best practice to keep the styles in &gt;style&lt; tags on this view. 
+
+
 
 ## html.html
-This page displays the encoded html, which will render decoded so it can be copied/pasted into sailthru.
+This page displays the encoded html, which will render decoded so it can be copied/pasted into sailthru. 
 
 ## plaintext.html
 This page displays the plain text, stripped-down version of the email. 

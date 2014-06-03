@@ -75,7 +75,7 @@ The top of this page contains two iframes: one that displays the contents of `ht
 Notes:
 
 - After you have marked up this page fully with dummy content, follow the [documentation for tabletop.js](https://github.com/jsoma/tabletop) to get the variables from your spreadsheet to render within the template. 
-- It's usually best practice to keep the styles in &gt;style&lt; tags on this view. 
+- It's usually best practice to keep the styles in &lt;style&gt; tags on this view. 
 
 
 
@@ -98,11 +98,19 @@ This page displays the plain text, stripped-down version of the email. This shou
 If you want editors/producers to have a persistent place through which to preview the email newsletter, it should be hosted somewhere. Verge temporarily hosts theirs at: http://laurenrabaino.com/verge/newsletter, but you could host it on a sanbox or S3 or wherever. 
 
 ## Resources
-- Yahoo Mail sucks: http://www.emailonacid.com/blog/details/C13/stop_yahoo_mail_from_rendering_your_media_queries
-- Which email clients support media queries? https://litmus.com/help/email-clients/media-query-support/
-- Which email clients support web fonts? http://www.campaignmonitor.com/resources/will-it-work/webfonts/
+
+### Guides:
 - Responsive email design best practices: http://www.campaignmonitor.com/guides/mobile/
+
+### Tools:
 - Mailchimp inliner tool (useful for the html.html page): http://templates.mailchimp.com/resources/inline-css/
 - Converting HTML entities (useful for the html.html page): http://htmlentities.net/
+
+## Compatibility: 
+- Which email clients support media queries? https://litmus.com/help/email-clients/media-query-support/
+- Which email clients support web fonts? http://www.campaignmonitor.com/resources/will-it-work/webfonts/
+
+### Troubleshooting:
+- Yahoo Mail sucks: http://www.emailonacid.com/blog/details/C13/stop_yahoo_mail_from_rendering_your_media_queries
 
 

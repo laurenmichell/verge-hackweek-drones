@@ -106,6 +106,7 @@ If you want editors/producers to have a persistent place through which to previe
 ### Tools:
 - Mailchimp inliner tool (useful for the html.html page): http://templates.mailchimp.com/resources/inline-css/
 - Converting HTML entities (useful for the html.html page): http://htmlentities.net/
+- Test multiple third-party browsers (we don't currently pay for this): https://litmus.com/
 
 ## Compatibility: 
 - Which email clients support media queries? https://litmus.com/help/email-clients/media-query-support/

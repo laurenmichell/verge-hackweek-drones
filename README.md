@@ -90,7 +90,7 @@ You need to do three specific steps to generate the markup for this page:
 
 
 ## plaintext.html
-This page displays the plain text, stripped-down version of the email. 
+This page displays the plain text, stripped-down version of the email. This should just be a simple "headline: [url]" treatment for stories and share/about/optout URLs. 
 
 # Resources
 - Yahoo Mail sucks: http://www.emailonacid.com/blog/details/C13/stop_yahoo_mail_from_rendering_your_media_queries

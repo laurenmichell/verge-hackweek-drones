@@ -49,6 +49,15 @@ Columns:
 - **storyblurb:** Blurb for the story
 - **number:** Sailthru image URL for the numbered burst icon
 
+### Sheet: advertiseon
+
+This is a custom sheet for the bottom variable advertisement. 
+
+Columns:
+
+- **advertiseon:** If populated with *any* value, markup for displaying ad will render in markup. If empty, ad will not display. 
+
+
 # Pages
 
 ## index.html

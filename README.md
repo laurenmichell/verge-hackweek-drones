@@ -1,5 +1,13 @@
 ## Overview
-This is a temporary bandaid tool created by Lauren to help editorial generate newsletters (HTML and plain text) via a Google Spreadsheet. 
+This is a temporary bandaid tool created by Lauren to help editorial generate newsletters (HTML and plain text) via a Google Spreadsheet for use with Sailthru's email newsletter templates and campaigns. Editors/producers can add headlines, blurbs, article URLs and image URLs to cells in a spreadsheet, which then spits out JSON that gets parsed into plain html markup giving you (1) a preview of the newsletter (2) generated code for the HTML version of the newsletter and (3) plain text for the plain text version of the newsletter. 
+
+The value in doing this is that until we have Chorus -> Sailthru integration or a custom email newsletter solution, all newsletters created will have to be done manually. To reduce the amount of human error involved in mucking around in markup or manipulating text via Sailthru's visual editor (which is also prone to creating html errors inadvertently), this tool removes editors and producers from the step of touching markup. 
+
+This June 2014 implementation is meant to be a temporary solution until a more sustainable option can be built. 
+
+See sample of this in action at http://laurenrabaino.com/verge/newsletter.
+
+If you are looking to use this mechanism to power a new newsletter, the best option is probably to clone the entire repo and replace `html.html`, `plaintext.html` and `index.html` with HTML, CSS, JS, tabletop variables, etc of your own style and from a different Google Spreadsheet.
 
 ### Dependencies
  - jQuery: http://jquery.com/
@@ -59,7 +67,7 @@ Columns:
 
 ### 2. Publish spreadsheet. 
 
-For tabletop/handlebars to access data from the spreadsheet, it needs to be publishing to the web. To make the sheet public, go to `File > Publish to the web > All sheets > Start publishing`. 
+For tabletop/handlebars to access data from the spreadsheet, it needs to be publishing to the web. To make the sheet public, go to `File > Publish to the web > All sheets > Start publishing`. It will give you a URL that looks something like this: https://docs.google.com/spreadsheet/pub?key=0Audl93NY80BvdDNUdWJtWUJOb2FNVmFXSEo4eVJOVWc&output=html. 
 
 Copy the link to the published data, which you will use in `index.html`, `html.hml` and `plaintext.html` in the next step. 
 

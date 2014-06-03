@@ -101,6 +101,7 @@ If you want editors/producers to have a persistent place through which to previe
 
 ### Guides:
 - Responsive email design best practices: http://www.campaignmonitor.com/guides/mobile/
+- Email marketing field guide: http://mailchimp.com/resources/guides/email-marketing-field-guide/
 
 ### Tools:
 - Mailchimp inliner tool (useful for the html.html page): http://templates.mailchimp.com/resources/inline-css/

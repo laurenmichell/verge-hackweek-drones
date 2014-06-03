@@ -38,6 +38,17 @@ Columns:
 - **featuredblurb:** Hand-crafted blurb for featured stories goes here.
 - **harmony:** If populated with *any value*, the corresponding story in that row will get a 'FROM OUR SPONSOR' label, a 'Powered by Vox Creative' byline and a right-aligned sponsored title bar. 
 
+### Sheet: storylist
+
+This powers the numbered list of headlines that appears in the lowermost section of the email newsletter. 
+
+Columns:
+
+- **storyhed:** Headline for the first story
+- **storyurl:** URL for the story
+- **storyblurb:** Blurb for the story
+- **number:** Sailthru image URL for the numbered burst icon
+
 # Pages
 
 ## index.html

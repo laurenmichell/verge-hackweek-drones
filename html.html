@@ -32,6 +32,10 @@
 
   &lt;body yahoo=&quot;fix&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
   &lt;center style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+  <div id="description-content"></div>
+     <script id="description" type="text/x-handlebars-template">
+        &lt;div style=&quot;display:none!important&quot;&gt;{{leadsummary}}&lt;/div&gt;
+     </script>
     &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; height=&quot;100%&quot; width=&quot;100%&quot; id=&quot;bodyMain&quot; class=&quot;mainTable stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
       &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
         &lt;td align=&quot;center&quot; valign=&quot;top&quot; id=&quot;bodyCell&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
@@ -610,6 +614,9 @@
         var source4   = $("#bottomad").html();
         var template4 = Handlebars.compile(source4);
 
+        var source5   = $("#description").html();
+        var template5 = Handlebars.compile(source5);
+
           $.each( tabletop.sheets("editorsnote").all(), function(i, newsletter3) {
           var html = template3(newsletter3);
           $("#editorsnote-content").append(html);
@@ -630,6 +637,11 @@
           $.each( tabletop.sheets("bottomad").all(), function(i, newsletter4) {
           var html = template4(newsletter4);
           $("#bottomad-content").append(html);
+        });
+
+        $.each( tabletop.sheets("editorsnote").all(), function(i, newsletter5) {
+          var html = template5(newsletter5);
+          $("#description-content").append(html);
         });
 
 

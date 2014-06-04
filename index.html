@@ -35,6 +35,10 @@
   </div>
 
   <center>
+    <div id="description-content"></div>
+     <script id="description" type="text/x-handlebars-template">
+        <div style="display:none!important">{{leadsummary}}</div>
+     </script>
     <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyMain" class="mainTable stack">
       <tr>
         <td align="center" valign="top" id="bodyCell">
@@ -283,6 +287,9 @@
         var source4   = $("#bottomad").html();
         var template4 = Handlebars.compile(source4);
 
+        var source5   = $("#description").html();
+        var template5 = Handlebars.compile(source5);
+
         $.each( tabletop.sheets("featuredstories").all(), function(i, newsletter) {
           var html = template(newsletter);
           $("#featuredstories-content").append(html);
@@ -297,6 +304,12 @@
           var html = template3(newsletter3);
           $("#editorsnote-content").append(html);
         });
+
+        $.each( tabletop.sheets("editorsnote").all(), function(i, newsletter5) {
+          var html = template5(newsletter5);
+          $("#description-content").append(html);
+        });
+
 
         $.each( tabletop.sheets("bottomad").all(), function(i, newsletter4) {
           var html = template4(newsletter4);

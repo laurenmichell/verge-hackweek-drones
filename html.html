@@ -613,6 +613,8 @@
           $.each( tabletop.sheets("editorsnote").all(), function(i, newsletter3) {
           var html = template3(newsletter3);
           $("#editorsnote-content").append(html);
+          $("#description").append(html);
+
         });
 
         $.each( tabletop.sheets("featuredstories").all(), function(i, newsletter) {
@@ -629,6 +631,8 @@
           var html = template4(newsletter4);
           $("#bottomad-content").append(html);
         });
+
+
 
       }
      

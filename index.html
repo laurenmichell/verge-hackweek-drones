@@ -98,9 +98,17 @@
                                         {{{editorsnote}}}</p><br/>
                                        {{/if}}
                                        {{#if leadhed}}
-                                        <a href="{{leadlink}}"><img src="{{leadimageurl}}" class="ledeimage stack" align="left"></a>
-                                        <h1><a href="{{leadlink}}">{{leadhed}}</a></h1>
-                                          <p>{{leadsummary}}</p>
+                                       <div id="leadstory" style="margin:20px 0px;">
+                                          <a href="{{leadlink}}"><img src="{{leadimageurl}}" class="ledeimage stack" align="left"></a>
+                                          {{#if video}}
+                                            <div class="videoLabel"> 
+                                              &#9658; Video
+                                            </div>
+                                         {{/if}}
+                                          <h1>
+                                          <a href="{{leadlink}}">{{leadhed}}</a></h1>
+                                            <p>{{leadsummary}}</p>
+                                        </div>
                                         {{/if}}
                                  
                                   {{#if advertisementon}}
@@ -468,19 +476,28 @@
         text-decoration:underline;
       } 
 
+      .videoLabel {
+        background: #fa4b2a;
+        color: #fff;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        display: inline-block;
+        font-size:10px;
+      }
+
       .newsletterInro {
         margin-top:20px;
       }
 
       .newsletterIntro h1 {
         line-height:28px;
-        padding:20px 0px 0px 0px;
+        padding:10px 0px 0px 0px;
       }
 
       .newsletterIntro .ledeimage {
         float:left;
         width:40%;
-        padding:20px 20px 0px 0px;
+        padding:0px 20px 0px 0px;
       }
 
       .newsletterIntro h1 a {

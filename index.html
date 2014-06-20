@@ -143,6 +143,11 @@
                               <a href="{{featuredurl}}"><img src="{{featuredimgurl}}" align="left"></a>
                             </td>
                             <td align="left" valign="top" class="longformPost stack">
+                              {{#if video}}
+                                            <div class="videoLabel" style="margin-top:5px; margin-bottom:10px;"> 
+                                              &#9658; Video
+                                            </div>
+                                         {{/if}}
                               {{! only output this if harmony is yes }}
                                     {{#if harmony}}
                                       <p class="sponsor_label">From our sponsor</p>
@@ -186,6 +191,11 @@
                             <img src="{{number}}">
                           </td>
                           <td align="left" valign="top" class="storiesPost">
+                            {{#if video}}
+                                <div class="videoLabel" style="margin-top:15px;"> 
+                                  &#9658; Video
+                                </div>
+                             {{/if}}
                             <h3><a href="{{storyurl}}">{{storyhed}}</a> 
                             </h3>
                             <p>

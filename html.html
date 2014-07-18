@@ -98,7 +98,13 @@
                                        &lt;div id=&quot;leadstory&quot; style=&quot;margin:20px 0px;&quot;&gt;
                                         &lt;a href=&quot;{{leadlink}}&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;img src=&quot;{{leadimageurl}}&quot; align=&quot;left&quot; class=&quot;ledeimage stack&quot; width="260" style=&quot;margin: 0px 0px 0px 0px;padding: 0px 20px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;width: 40%;float: left;&quot;&gt;&lt;/a&gt;
                                         {{#if video}}
-                                        &lt;div class=&quot;videoLabel&quot; style=&quot;background: #fa4b2a; color: #fff; padding: 5px 10px; text-transform: uppercase; display: inline-block; font-size:10px;&quot;&gt; &amp;#9658; Video &lt;/div&gt;
+                                        &lt;div class=&quot;videoLabel&quot; style=&quot;background: #fa4b2a; color: #fff; padding: 5px 10px; text-transform: uppercase; display: inline-block; font-size:10px;&quot;&gt; 
+
+                                              {{#if videohuburl}}&lt;a href="{{videohuburl}}" style="color:#fff; display:block; text-decoration:none;"&gt;{{/if}}
+                                                &#9658; Video
+                                              {{#if videohuburl}}&lt;/a&gt;{{/if}}
+
+                                         &lt;/div&gt;
                                         {{/if}}
                                         &lt;h1 style=&quot;margin: 0px 0px 0px 0px;padding: 10px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;line-height: 28px;&quot;&gt;&lt;a href=&quot;{{leadlink}}&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'Roboto Slab', sans-serif;font-weight: bold;color: #000;text-decoration: none;font-size: 26px;&quot;&gt;{{leadhed}}&lt;/a&gt;&lt;/h1&gt;
                                           &lt;p style=&quot;margin: 10px 10px 0px 0px;padding: 0px 0px 15px 0px;font-family: 'helvetica', 'arial', sans-serif;font-size: 18px;line-height: 25px;&quot;&gt;{{{leadsummary}}}&lt;/p&gt;
@@ -140,7 +146,13 @@
                             &lt;/td&gt;
                             &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;longformPost stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 10px 5px 20px 15px;font-family: 'helvetica', 'arial', sans-serif;width: 65%;&quot;&gt;
                             {{#if video}}
-                             &lt;div class=&quot;videoLabel&quot; style=&quot;margin-top:5px; margin-bottom:10px; background: #fa4b2a; color: #fff; padding: 5px 10px; text-transform: uppercase; display: inline-block; font-size:10px;&quot;&gt; &amp;#9658; Video &lt;/div&gt;
+                             &lt;div class=&quot;videoLabel&quot; style=&quot;margin-top:5px; margin-bottom:10px; background: #fa4b2a; color: #fff; padding: 5px 10px; text-transform: uppercase; display: inline-block; font-size:10px;&quot;&gt; 
+
+                                {{#if videohuburl}}&lt;a href="{{videohuburl}}" style="color:#fff; display:block; text-decoration:none;"&gt;{{/if}}
+                                  &#9658; Video
+                                {{#if videohuburl}}&lt;/a&gt;{{/if}}
+
+                              &lt;/div&gt;
                              {{/if}}
                               {{! only output this if harmony is yes }}
                                 {{#if harmony}}
@@ -195,7 +207,13 @@
                           &lt;/td&gt;
                           &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;storiesPost&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;width: 500px;padding-top: 10px;padding-bottom: 10px;&quot;&gt;
                             {{#if video}}
-                             &lt;div class=&quot;videoLabel&quot; style=&quot;margin-top:15px; background: #fa4b2a; color: #fff; padding: 5px 10px; text-transform: uppercase; display: inline-block; font-size:10px;&quot;&gt; &amp;#9658; Video &lt;/div&gt;
+                             &lt;div class=&quot;videoLabel&quot; style=&quot;margin-top:15px; background: #fa4b2a; color: #fff; padding: 5px 10px; text-transform: uppercase; display: inline-block; font-size:10px;&quot;&gt; 
+
+                                  {{#if videohuburl}}&lt;a href="{{videohuburl}}" style="color:#fff; display:block; text-decoration:none;"&gt;{{/if}}
+                                    &#9658; Video
+                                  {{#if videohuburl}}&lt;/a&gt;{{/if}}
+
+                             &lt;/div&gt;
                               {{/if}}
                             &lt;h3 style=&quot;margin: 0px 0px 0px 0px;font-weight:bold;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;a href=&quot;{{storyurl}}&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'Roboto Slab', sans-serif;font-weight: bold;color: #000;font-size: 16px;line-height: 20px;text-decoration: none;&quot;&gt;{{storyhed}}&lt;/a&gt; 
                             &lt;/h3&gt;
@@ -422,6 +440,21 @@
       .longformPost h3 a:hover, .newsletterIntro h1 a:hover{
         text-decoration:underline;
       } 
+
+      .videoLabel {
+        background: #fa4b2a;
+        color: #fff;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        display: inline-block;
+        font-size:10px;
+      }
+
+      .videoLabel a{
+        color: #fff;
+        display:block;
+        text-decoration: none;
+      }
 
       .newsletterInro {
         margin-top:20px;

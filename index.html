@@ -102,7 +102,9 @@
                                           <a href="{{leadlink}}"><img src="{{leadimageurl}}" class="ledeimage stack" align="left"></a>
                                           {{#if video}}
                                             <div class="videoLabel"> 
-                                              &#9658; Video
+                                              {{#if videohuburl}}<a href="{{videohuburl}}">{{/if}}
+                                                &#9658; Video
+                                              {{#if videohuburl}}</a>{{/if}}
                                             </div>
                                          {{/if}}
                                           <h1>
@@ -145,7 +147,9 @@
                             <td align="left" valign="top" class="longformPost stack">
                               {{#if video}}
                                             <div class="videoLabel" style="margin-top:5px; margin-bottom:10px;"> 
-                                              &#9658; Video
+                                              {{#if videohuburl}}<a href="{{videohuburl}}">{{/if}}
+                                                &#9658; Video
+                                              {{#if videohuburl}}</a>{{/if}}
                                             </div>
                                          {{/if}}
                               {{! only output this if harmony is yes }}
@@ -193,7 +197,9 @@
                           <td align="left" valign="top" class="storiesPost">
                             {{#if video}}
                                 <div class="videoLabel" style="margin-top:15px;"> 
-                                  &#9658; Video
+                                  {{#if videohuburl}}<a href="{{videohuburl}}">{{/if}}
+                                    &#9658; Video
+                                  {{#if videohuburl}}</a>{{/if}}
                                 </div>
                              {{/if}}
                             <h3><a href="{{storyurl}}">{{storyhed}}</a> 
@@ -493,6 +499,12 @@
         text-transform: uppercase;
         display: inline-block;
         font-size:10px;
+      }
+
+      .videoLabel a{
+        color: #fff;
+        display:block;
+        text-decoration: none;
       }
 
       .newsletterInro {

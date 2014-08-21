@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="styles.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>dronessss</h1>
+    
+    <div id="content"></div>
+    
+    <script id="drone-template" type="text/x-handlebars-template">
+      <div class="entry">
+        <h2>{{name}}!</h2>
+        <h3>company {{company}}</h3>
+        <div class="body">
+          {{{description}}}
+        </div>
+      </div>
+    </script>
+
+    <!-- Don't need jQuery for Tabletop, but using it for this example -->
+    <script type="text/javascript" src="handlebars.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="tabletop.js"></script>
+    <script type="text/javascript">
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0Audl93NY80BvdE5ocXNaZDlXaDNZNFFjc2VaTlU0X2c&output=html';
+
+      $(document).ready( function() {
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         parseNumbers: true } );
+      });
+        
+      function showInfo(data, tabletop) {
+        var source   = $("#drone-template").html();
+        var template = Handlebars.compile(source);
+
+        $.each( tabletop.sheets("drones").all(), function(i, cat) {
+          var html = template(drone);
+          $("#content").append(html);
+        });
+      }
+    
+      document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");    
+    </script>
+  </body>
+</html>

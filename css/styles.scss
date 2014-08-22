@@ -1,6 +1,6 @@
 body {
 	margin:0px;
-	padding:80px;
+	padding:10%;
 	background-color: #122944;
 	background-image: url('../img/sky.png');
 	background-attachment: fixed;
@@ -116,10 +116,15 @@ body {
 			}
 		}
 	}
-	@media only screen and (min-width: 768px) {
-		#content-drone {
-			.entry { width:100%;}	
-		}
-	}
+}
 
+@media only screen and (max-width: 1140px) {
+	#content-drone {
+		.entry { width:40%;}	
+	}
+}
+@media only screen and (max-width: 767px) {
+	#content-drone {
+		.entry { width:100%;}	
+	}
 }

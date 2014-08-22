@@ -1,6 +1,6 @@
 body {
   margin: 0px;
-  padding: 80px;
+  padding: 10%;
   background-color: #122944;
   background-image: url("../img/sky.png");
   background-attachment: fixed;
@@ -93,6 +93,10 @@ body {
         #content-drone .entry .drone_modal div .photo h2 {
           top: 0;
           left: 0; }
-@media only screen and (min-width: 768px) {
-  #content-drone #content-drone .entry {
+
+@media only screen and (max-width: 1140px) {
+  #content-drone .entry {
+    width: 40%; } }
+@media only screen and (max-width: 767px) {
+  #content-drone .entry {
     width: 100%; } }

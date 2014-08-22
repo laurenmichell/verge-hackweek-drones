@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+        
+        Hello! This page is the html.html page, which will display on your index.html page. 
+        It references the same Google Spreadsheet by ID as the index.html page. It references
+        the same variables for each column as index.html.
+
+        The biggest difference is that, because this page is meant to generate code that can be
+        copied/pasted into Sailthru's code tab and is meant to then redner code that displays
+        in all email clients:
+
+           (1) The HTML source is encoded so that the code can be copied/pasted as HTML rather 
+               render as markup. 
+           (2) All styles are displayed inline within the individual elements themselves. The
+               reason for this is because most email clients only support inline styles, not 
+               styles that are in <style> tags. Please see the README for more information. 
+
+    -->
+    <style>
+      /*these styles are just to make it more visually obvious that this page is code that should be copied/pasted into Sailthru.*/
+      body {font-family:courier;font-size:10px;} 
+    </style>
+  </head>
+  <body>
+ &lt;!DOCTYPE html&gt;
+&lt;html style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+  &lt;head style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+  &lt;/head&gt;
+
+
+  &lt;body yahoo=&quot;fix&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+  &lt;center style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+  <div id="description-content"></div>
+     <script id="description" type="text/x-handlebars-template">
+        &lt;div style=&quot;display:none!important&quot;&gt;{{leadsummary}}&lt;/div&gt;
+     </script>
+    &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; height=&quot;100%&quot; width=&quot;100%&quot; id=&quot;bodyMain&quot; class=&quot;mainTable stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+      &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+        &lt;td align=&quot;center&quot; valign=&quot;top&quot; id=&quot;bodyCell&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+          &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; id=&quot;emailContainer&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+            &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+              &lt;td align=&quot;center&quot; valign=&quot;top&quot; id=&quot;headerMain&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;margin-top: 40px;display: block;&quot;&gt;
+                &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;600&quot; id=&quot;headingBlock&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                  &lt;tr class=&quot;stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                    &lt;td align=&quot;center&quot; valign=&quot;top&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                      &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                        &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                          &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;vergeLogo&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;background: none;height: 15px;width: 50%;vertical-align: bottom;&quot;&gt;
+                                 &lt;a href="http://theverge.com"&gt;&lt;img src="{beacon_src_ssl}"/&gt;&lt;/a&gt;
+                          &lt;/td&gt;
+                          &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;theDate mobilehide&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 45px 10px 0px 10px;font-family: 'helvetica', 'arial', sans-serif;width: 25%;&quot;&gt;
+                            &lt;h1 style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: Georgia,Palatino,Palatino Linotype,Times,Times New Roman,serif;font-size: 14px;color: #5f5f5f;&quot;&gt;&lt;/h1&gt;
+                          &lt;/td&gt;
+                          &lt;td align=&quot;right&quot; valign=&quot;middle&quot; class=&quot;sponsorLogo&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;background: none;height: 15px;width: 25%;&quot;&gt;
+                            {include "ATF Sponsored Title Bar"}
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                      &lt;/table&gt;
+                      &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                        &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                          &lt;td align=&quot;center&quot; valign=&quot;top&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                      &lt;/table&gt;
+                    &lt;/td&gt;
+                  &lt;/tr&gt;
+                &lt;/table&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+              &lt;td align=&quot;center&quot; valign=&quot;top&quot; id=&quot;longformsMain&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;600&quot; id=&quot;longformsBlock&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                  &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                    &lt;td align=&quot;center&quot; valign=&quot;top&quot; class=&quot;stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                      &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                        &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                          &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;newsletterIntro stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                            &lt;h2 style=&quot;margin: 0px 0px 0px 0px;padding: 5px 10px;font-family: 'Oswald', sans-serif;margin-top: -5px;font-weight: 300;background: black;letter-spacing: 1px;font-size: 18px;color: rgb(255,255,255);display:block;&quot;&gt;YOU NEED TO READ THIS NOW&lt;/h2&gt;
+                          &lt;/td&gt;
+                          &lt;td align=&quot;right&quot; valign=&quot;top&quot; class=&quot;newsletterIntro mobilehide&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                            &lt;h2 style=&quot;margin: 0px 0px 0px 0px;padding: 5px 10px;font-family: 'Oswald', sans-serif;margin-top: -5px;font-weight: 300;background: black;letter-spacing: 1px;font-size: 18px;color: rgb(255,255,255);display:block;&quot;&gt;{date('MMM dd, yyyy')}&lt;/h2&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                          &lt;td align=&quot;left&quot; valign=&quot;top&quot; colspan=&quot;2&quot; class=&quot;newsletterIntro&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                            &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                              &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                                &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;newsletterIntro stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                                 <div id="editorsnote-content"></div>
+                                   <script id="editorsnote" type="text/x-handlebars-template">
+                                      {{#if editorsnote}}
+                                        &lt;p style=&quot;margin: 10px 10px 0px 0px;padding: 0px 0px 15px 0px;font-family: 'helvetica', 'arial', sans-serif;font-size: 18px;line-height: 25px;&quot;&gt;&lt;strong style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;Note from the editor&lt;/strong&gt;&lt;br style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                                        {{{editorsnote}}}&lt;/p&gt;&lt;br style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                                       {{/if}}
+                                       {{#if leadhed}}
+                                       &lt;div id=&quot;leadstory&quot; style=&quot;margin:20px 0px;&quot;&gt;
+                                        &lt;a href=&quot;{{leadlink}}&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;img src=&quot;{{leadimageurl}}&quot; align=&quot;left&quot; class=&quot;ledeimage stack&quot; width="260" style=&quot;margin: 0px 0px 0px 0px;padding: 0px 20px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;width: 40%;float: left;&quot;&gt;&lt;/a&gt;
+                                        {{#if video}}
+                                        &lt;div class=&quot;videoLabel&quot; style=&quot;background: #fa4b2a; color: #fff; padding: 5px 10px; text-transform: uppercase; display: inline-block; font-size:10px;&quot;&gt; 
+
+                                              {{#if videohuburl}}&lt;a href="{{videohuburl}}" style="color:#fff; display:block; text-decoration:none;"&gt;{{/if}}
+                                                &#9658; Video
+                                              {{#if videohuburl}}&lt;/a&gt;{{/if}}
+
+                                         &lt;/div&gt;
+                                        {{/if}}
+                                        &lt;h1 style=&quot;margin: 0px 0px 0px 0px;padding: 10px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;line-height: 28px;&quot;&gt;&lt;a href=&quot;{{leadlink}}&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'Roboto Slab', sans-serif;font-weight: bold;color: #000;text-decoration: none;font-size: 26px;&quot;&gt;{{leadhed}}&lt;/a&gt;&lt;/h1&gt;
+                                          &lt;p style=&quot;margin: 10px 10px 0px 0px;padding: 0px 0px 15px 0px;font-family: 'helvetica', 'arial', sans-serif;font-size: 18px;line-height: 25px;&quot;&gt;{{{leadsummary}}}&lt;/p&gt;
+                                          &lt;/div&gt;
+                                        {{/if}}
+                                  {{#if advertisementon}}
+                                  &lt;center style=&quot;margin: 0px auto;width:300px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                                      &lt;small style=&quot;margin: 20px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif; color: #999; border-bottom: 1px solid #ccc; display: block; padding-bottom: 10px; font-size: 11px;&quot;&gt;ADVERTISEMENT&lt;/small&gt;&lt;br style=&quot;margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;table style=&quot;width: 300px!important;margin: 0px auto;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot; width=&quot;300&quot;&gt;  
+                                       {include "ATF Med Rec"}
+                                      &lt;br style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;br style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                                    &lt;/table&gt;&lt;/center&gt;
+                                    {{/if}}
+                                    </script>
+                                    &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+                                &lt;/td&gt;
+                              &lt;/tr&gt;
+                            &lt;/table&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                          &lt;td colspan=&quot;2&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                      &lt;/table&gt;
+                      &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;600&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                        &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                          &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;latestLongforms stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                            &lt;h2 style=&quot;margin: 0px 0px 0px 0px;padding: 5px 10px;font-family: 'Oswald', sans-serif;font-weight: 300;background: black;letter-spacing: 1px;font-size: 18px;color: rgb(255,255,255);display:block;&quot;&gt;FEATURED STORIES&lt;/h2&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                      &lt;/table&gt;
+                      &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;600&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                        <div id="featuredstories-content" style="margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;"></div>
+                        <script id="featuredstories" type="text/x-handlebars-template">
+                          &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                            &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;longformsImage stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;width: 35%;padding-top: 15px;padding-bottom: 10px;&quot;&gt;
+                              &lt;a href=&quot;{{featuredurl}}&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;img src=&quot;{{featuredimgurl}}&quot; width="210" align=&quot;left&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;width: 100%;&quot;&gt;&lt;/a&gt;
+                            &lt;/td&gt;
+                            &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;longformPost stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 10px 5px 20px 15px;font-family: 'helvetica', 'arial', sans-serif;width: 65%;&quot;&gt;
+                            {{#if video}}
+                             &lt;div class=&quot;videoLabel&quot; style=&quot;margin-top:5px; margin-bottom:10px; background: #fa4b2a; color: #fff; padding: 5px 10px; text-transform: uppercase; display: inline-block; font-size:10px;&quot;&gt; 
+
+                                {{#if videohuburl}}&lt;a href="{{videohuburl}}" style="color:#fff; display:block; text-decoration:none;"&gt;{{/if}}
+                                  &#9658; Video
+                                {{#if videohuburl}}&lt;/a&gt;{{/if}}
+
+                              &lt;/div&gt;
+                             {{/if}}
+                              {{! only output this if harmony is yes }}
+                                {{#if harmony}}
+                                  &lt;p class=&quot;sponsor_label&quot; style="background:#999;color:#fff;text-transform:uppercase; font-weight:bold; text-align:center; font-size:10px!important;display:inline-block;margin-bottom:10px!important;padding:3px 5px;"&gt;From our sponsor&lt;/p&gt;
+                                {{/if}}
+                              &lt;h3 style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;font-weight:bold;line-height:25px;&quot;&gt;&lt;a href=&quot;{{featuredurl}}&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'Roboto Slab', sans-serif;font-size: 22px;font-weight: bold;color: #000;text-decoration: none;&quot;&gt;{{featuredhed}}&lt;/a&gt; 
+                              &lt;/h3&gt;
+                               {{#if harmony}}
+                              &lt;table&gt;
+                                &lt;tr&gt;
+                                   &lt;td style=&quot;width:50%;&quot;&gt;
+                                      &lt;span class=&quot;from_sponsor&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 3px 0px;font-family: 'helvetica', 'arial', sans-serif;color: #333;font-weight: bold;font-size: 12px !important;line-height: 20px;&quot;&gt; Powered by Vox Creative &lt;/span&gt;
+                                   &lt;/td&gt;
+                                   &lt;td style=&quot;width:50%;&quot;&gt;
+                                      {include &quot;BTF Sponsored Title Bar&quot;}
+                                   &lt;/td&gt;
+                                 &lt;/tr&gt;
+                              &lt;/table&gt;        
+                              {{/if}}
+                              &lt;p style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;font-size: 14px;line-height: 20px;&quot;&gt;
+                                {{{featuredblurb}}}
+                              &lt;/p&gt;
+                            &lt;/td&gt;
+                          &lt;/tr&gt;
+                          </script>
+                        
+
+                      &lt;/table&gt;
+                    &lt;/td&gt;
+                  &lt;/tr&gt;
+                &lt;/table&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+              &lt;td align=&quot;center&quot; valign=&quot;top&quot; id=&quot;storiesMain&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;600&quot; id=&quot;storiesBlock&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                  &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                    &lt;td align=&quot;center&quot; valign=&quot;top&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                      &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                        &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                          &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;latestStories stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                            &lt;h2 style=&quot;margin: 0px 0px 0px 0px;padding: 5px 10px;font-family: 'Oswald', sans-serif;margin-top: 10px;margin-bottom: 5px;font-weight: 300;background: black;letter-spacing: 1px;font-size: 18px;color: rgb(255,255,255);display:block;&quot;&gt;MORE FROM THE VERGE&lt;/h2&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                      &lt;/table&gt;
+                      &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; class=&quot;storiesPush&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;margin-bottom: 20px;&quot;&gt;
+                       <div id="storylist-content"></div>
+                      <script id="storylist" type="text/x-handlebars-template">
+                        &lt;tr class=&quot;stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                          &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;storiesTag&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 20px;font-family: 'helvetica', 'arial', sans-serif;width: 30px;&quot;&gt;
+                            &lt;img src=&quot;{{number}}&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;width: 100%;&quot;&gt;
+                          &lt;/td&gt;
+                          &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;storiesPost&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;width: 500px;padding-top: 10px;padding-bottom: 10px;&quot;&gt;
+                            {{#if video}}
+                             &lt;div class=&quot;videoLabel&quot; style=&quot;margin-top:15px; background: #fa4b2a; color: #fff; padding: 5px 10px; text-transform: uppercase; display: inline-block; font-size:10px;&quot;&gt; 
+
+                                  {{#if videohuburl}}&lt;a href="{{videohuburl}}" style="color:#fff; display:block; text-decoration:none;"&gt;{{/if}}
+                                    &#9658; Video
+                                  {{#if videohuburl}}&lt;/a&gt;{{/if}}
+
+                             &lt;/div&gt;
+                              {{/if}}
+                            &lt;h3 style=&quot;margin: 0px 0px 0px 0px;font-weight:bold;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;a href=&quot;{{storyurl}}&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'Roboto Slab', sans-serif;font-weight: bold;color: #000;font-size: 16px;line-height: 20px;text-decoration: none;&quot;&gt;{{storyhed}}&lt;/a&gt; 
+                            &lt;/h3&gt;
+                            &lt;p style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;font-size: 14px;line-height: 20px;&quot;&gt;
+                             {{storyblurb}}
+                            &lt;/p&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                      </script>
+
+                      &lt;/table&gt;
+                    &lt;/td&gt;
+                  &lt;/tr&gt;
+                  <div id="bottomad-content"></div>
+                  <script id="bottomad" type="text/x-handlebars-template">
+                  {{#if advertiseon}}
+                  &lt;tr class=&quot;stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                    &lt;td align=&quot;left&quot; valign=&quot;top&quot; colspan=&quot;2&quot; class=&quot;ad_3&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                      &lt;center style=&quot;margin: 0px auto;width:300px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;small style=&quot;margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif; color: #999; border-bottom: 1px solid #ccc; display: block; padding-bottom: 10px; font-size: 11px;&quot;&gt;ADVERTISEMENT&lt;/small&gt;&lt;br style=&quot;margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;table style=&quot;width: 300px!important;margin: 0px auto;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot; width=&quot;300&quot;&gt;
+                       {include "BTF Variable Med Rec"} 
+                      &lt;/table&gt;&lt;/center&gt;
+                    &lt;/td&gt;
+                  &lt;/tr&gt;
+                  {{/if}}
+                  </script>
+                  &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                    &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;ad_3&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+
+                    &lt;/td&gt;
+                    &lt;td align=&quot;left&quot; valign=&quot;top&quot; class=&quot;ad_3&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+
+                    &lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                    &lt;td align=&quot;center&quot; valign=&quot;top&quot; class=&quot;horizontalRule stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;background: none;display: block;border: solid 2px rgb(195,195,195);border-width: 0px 0px 2px 0px;height: 2px;width: 100%;padding-top: 10px;margin-bottom: 10px;&quot;&gt;
+                    &lt;/td&gt;
+                  &lt;/tr&gt;
+                &lt;/table&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+              &lt;td align=&quot;center&quot; valign=&quot;top&quot; id=&quot;footerMain&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;600&quot; id=&quot;footerBlock&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                  &lt;tr class=&quot;stack&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                    &lt;td style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                      &lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                        &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                          &lt;td align=&quot;center&quot; valign=&quot;top&quot; class=&quot;socialButton&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;padding-top: 15px;padding-bottom: 10px;&quot;&gt;
+                            &lt;a href=&quot;https://www.facebook.com/verge&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;img src=&quot;http://media.sailthru.com/zh/1jy/5/s/538623f50899b.png&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;width: 25px;height: 25px;margin-left: 10px;margin-right: 10px;&quot;&gt;&lt;/a&gt;
+                            &lt;a href=&quot;https://twitter.com/verge&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;img src=&quot;http://media.sailthru.com/zh/1jy/5/s/5386242c42f5a.png&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;width: 25px;height: 25px;margin-left: 10px;margin-right: 10px;&quot;&gt;&lt;/a&gt;
+                            &lt;a href=&quot;https://plus.google.com/+TheVerge&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;img src=&quot;http://media.sailthru.com/zh/1jy/5/s/538624516a8fd.png&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;width: 25px;height: 25px;margin-left: 10px;margin-right: 10px;&quot;&gt;&lt;/a&gt;
+                            &lt;a href=&quot;https://www.youtube.com/user/TheVerge&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;&lt;img src=&quot;http://media.sailthru.com/zh/1jy/5/s/5386246f3c717.png&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;width: 25px;height: 25px;margin-left: 10px;margin-right: 10px;&quot;&gt;&lt;/a&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                          &lt;td align=&quot;center&quot; valign=&quot;top&quot; class=&quot;horizontalRule&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;background: none;display: block;border: solid 2px rgb(195,195,195);border-width: 0px 0px 2px 0px;height: 2px;width: 100%;padding-top: 10px;margin-bottom: 10px;&quot;&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+                          &lt;td align=&quot;center&quot; valign=&quot;top&quot; class=&quot;manageBlock&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;padding-top: 15px;padding-bottom: 15px;&quot;&gt;
+                            &lt;p style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;font-size: 12px;color: rgb(190,190,190);&quot;&gt;
+                              &lt;a href=&quot;http://www.theverge.com/about-the-verge&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;color: rgb(190,190,190);margin-left: 5px;margin-right: 5px;&quot;&gt;About The Verge &lt;/a&gt;|
+                              &lt;a href=&quot;http://www.theverge.com/newsletter&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;color: rgb(190,190,190);margin-left: 5px;margin-right: 5px;&quot;&gt;Subscribe &lt;/a&gt;|
+                              &lt;a href=&quot;http://s.sbnation.com/manage/zh/verge-optout?email={email}&hash={md5(email+'ec424b00fd5efd6164e1a551b4cf516a')}&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;color: rgb(190,190,190);margin-left: 5px;margin-right: 5px;&quot;&gt;Unsubscribe &lt;/a&gt;|
+                              &lt;a href=&quot;http://www.voxmedia.com/privacy-policy&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;color: rgb(190,190,190);margin-left: 5px;margin-right: 5px;&quot;&gt;Privacy Policy&lt;/a&gt;&lt;br/&gt;&lt;p style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;color: rgb(190,190,190);margin-left: 5px;margin-right: 5px;&quot;&gt;Vox Media, 1201 Connecticut Ave. NW, Washington, DC 20036&lt;/&gt;
+                              &lt;!--{optout_confirm_url}--&gt;
+                            &lt;/p&gt;
+                          &lt;/td&gt;
+                        &lt;/tr&gt;
+                      &lt;/table&gt;
+                    &lt;/td&gt;
+                  &lt;/tr&gt;
+              &lt;/table&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/table&gt;
+        
+      
+    
+  &lt;/center&gt;
+
+    &lt;link href=&quot;http://fonts.googleapis.com/css?family=Oswald:400,300&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+      &lt;link href=&quot;http://fonts.googleapis.com/css?family=Roboto+Slab:400,300&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+      &lt;style type=&quot;text/css&quot; style=&quot;margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;font-family: 'helvetica', 'arial', sans-serif;&quot;&gt;
+      * {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        font-family: 'helvetica', 'arial', sans-serif;
+      }
+
+      img {
+        width:100%;
+      }
+
+      #headerMain {
+        margin-top: 40px;
+        display: block;
+      }
+
+      .vergeLogo {
+        background: none;
+        height: 15px;
+        width: 50%;
+        vertical-align: bottom;
+      }
+
+      .vergeLogo h1 {
+        display: none;
+      }
+
+      .vergeLogo p {
+        margin-top: 5px;
+      }
+
+      .theDate {
+        width: 25%;
+        padding: 45px 10px 0px 10px;
+      }
+
+      .theDate h1 {
+        font-family: Georgia,Palatino,Palatino Linotype,Times,Times New Roman,serif;
+        font-size: 14px;
+        color: #5f5f5f;
+      }
+
+      .theDate p {
+        margin-top: 5px;
+      }
+
+      .sponsorLogo {
+        background: none;
+        height: 15px;
+        width: 25%;
+      }
+
+      .sponsorLogo h1 {
+        display: none;
+      }
+
+      .horizontalRule {
+        background: none;
+        display: block;
+        border: solid 2px rgb(195,195,195);
+        border-width: 0px 0px 2px 0px;
+        height: 2px;
+        width: 100%;
+        padding-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .newsletterIntro {
+      }
+
+      .newsletterIntro p {
+        font-size: 18px;
+        line-height: 25px;
+        padding: 0px 0px 15px 0px;
+        /*border-right: 1px #333 solid;*/
+         margin: 10px 10px 0px 0px;
+         
+      }
+
+      .newsletterIntro h2 {
+        margin-top: -5px;
+        font-family: 'Oswald', sans-serif;
+        padding:5px 10px;
+        font-weight: 300;
+        background: black;
+        letter-spacing:1px;
+        font-size: 18px;
+        color: rgb(255,255,255);
+      }
+
+      .newsletterIntroAd {
+        width:300px;
+        margin-bottom:20px auto;
+        
+      }
+      .newsletterPara {
+        padding: 15px 10px;
+      }
+
+      .newsletterPara p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .latestLongforms {
+
+      }
+
+      .latestLongforms h2 {
+        font-family: 'Oswald', sans-serif;
+        padding:5px 10px;
+        font-weight: 300;
+        background: black;
+        letter-spacing:1px;
+        font-size: 18px;
+        color: rgb(255,255,255);
+      }
+
+      .longformsImage {
+        width: 35%;
+        padding-top: 15px;
+        padding-bottom: 10px;
+      }
+
+      .longformPost {
+        width: 65%;
+        padding: 15px 5px 20px 15px;
+      }
+
+      .longformPost h3 a {
+        font-size: 22px;
+      }
+
+      .longformPost h3 a, .newsletterIntro h1 a {
+        font-family: Georgia,Palatino,Palatino Linotype,Times,Times New Roman,serif;
+        font-family: 'Roboto Slab', sans-serif;
+        font-weight: bold;
+        color:#000;
+        text-decoration:none;
+      }
+
+      .longformPost h3 a:hover, .newsletterIntro h1 a:hover{
+        text-decoration:underline;
+      } 
+
+      .videoLabel {
+        background: #fa4b2a;
+        color: #fff;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        display: inline-block;
+        font-size:10px;
+      }
+
+      .videoLabel a{
+        color: #fff;
+        display:block;
+        text-decoration: none;
+      }
+
+      .newsletterInro {
+        margin-top:20px;
+      }
+
+      .newsletterIntro h1 {
+        margin-top:20px;
+        line-height:28px;
+      }
+
+      .newsletterIntro .ledeimage {
+        float:left;
+        width:40%;
+        margin-right:20px;
+      }
+
+      .newsletterIntro h1 a {
+        font-size: 26px;
+      }
+
+      .longformPost p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .latestStories {
+
+      }
+
+      .latestStories h2 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-family: 'Oswald', sans-serif;
+        padding:5px 10px;
+        font-weight: 300;
+        background: black;
+        letter-spacing:1px;
+        font-size: 18px;
+        color: rgb(255,255,255);
+      }
+
+      .storiesTag {
+        width: 30px;
+        padding: 20px;
+      }
+
+      .storiesPost {
+        width: 500px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .storiesPost h3 a {
+        font-family: Georgia,Palatino,Palatino Linotype,Times,Times New Roman,serif;
+        font-family: 'Roboto Slab', sans-serif;
+        font-weight: bold;
+        color:#000;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration: none;
+      }
+
+      .storiesPost h3 a:hover {
+        text-decoration:underline;
+      }
+
+      .storiesPost p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .storiesPush {
+        margin-bottom: 20px;
+      }
+
+      .socialButton {
+        padding-top: 15px;
+        padding-bottom: 10px;
+      }
+
+      .socialButton a img {
+        height: 25px;
+        width: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .manageBlock {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      .manageBlock p {
+        font-size: 12px;
+        color: rgb(190,190,190);
+      }
+
+      .manageBlock a {
+        color: rgb(190,190,190);
+        margin-left:5px;
+        margin-right:5px;
+      }
+
+      .pad {
+        padding-top: 15px;
+      }
+
+      .advert {
+        font-size: 10px;
+        font-style: italic;
+      }
+
+      .ad_2 {
+        width: 50%;
+      }
+
+      .ad_2 img {
+        margin-bottom: -4px;
+      }
+      .from_sponsor {
+        font-size:12px !important;
+        color:#333;
+        font-weight:bold;
+        padding:3px 0px;
+      }
+      .from_sponsor span {
+        font-weight:normal;
+        color:#666;
+        padding:0px 5px;
+      }
+
+    @media only screen and (max-width: 480px) {
+              body[yahoo] table {
+                width: 320px !important;
+              }
+              body[yahoo] table .stack{
+                width: 320px !important;
+                display:block;
+              }
+              body[yahoo] .mobilehide {
+                display:none;
+              }
+              body[yahoo] .newsletterIntro p {
+                  width:100%;
+                  display:block;
+                  border-right:0px;
+                }
+              body[yahoo] .storiesPost {
+                width:290px;
+              }
+              body[yahoo] .storiesPush{
+                padding:0px;
+                margin:0px;
+              }
+              body[yahoo] .newsletterIntroAd {
+                padding:0px;
+                margin:0px 0px 20px 0px;
+                width:100%;
+              }
+              body[yahoo] .vergeLogo{
+                width:20%;
+                padding-right:10px;
+              }
+              body[yahoo] .newsletterIntro .ledeimage {
+                padding-bottom:20px;
+            }
+        }
+        }
+
+      &lt;/style&gt;
+
+
+  &lt;/body&gt;
+&lt;/html&gt;
+
+
+
+<script type="text/javascript" src="handlebars.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="tabletop.js"></script>
+
+    <script type="text/javascript">
+      var public_spreadsheet_url = "https://docs.google.com/spreadsheet/pub?key=0Audl93NY80BvdDNUdWJtWUJOb2FNVmFXSEo4eVJOVWc&output=html";
+
+      $(document).ready( function() {
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         parseNumbers: true } );
+      });
+        
+      function showInfo(data, tabletop) {
+        
+        var source3   = $("#editorsnote").html();
+        var template3 = Handlebars.compile(source3);
+
+        var source   = $("#featuredstories").html();
+        var template = Handlebars.compile(source);
+
+        var source2   = $("#storylist").html();
+        var template2 = Handlebars.compile(source2);
+
+        var source4   = $("#bottomad").html();
+        var template4 = Handlebars.compile(source4);
+
+        var source5   = $("#description").html();
+        var template5 = Handlebars.compile(source5);
+
+          $.each( tabletop.sheets("editorsnote").all(), function(i, newsletter3) {
+          var html = template3(newsletter3);
+          $("#editorsnote-content").append(html);
+          $("#description").append(html);
+
+        });
+
+        $.each( tabletop.sheets("featuredstories").all(), function(i, newsletter) {
+          var html = template(newsletter);
+          $("#featuredstories-content").append(html);
+        });
+
+         $.each( tabletop.sheets("storylist").all(), function(i, newsletter2) {
+          var html = template2(newsletter2);
+          $("#storylist-content").append(html);
+        });
+
+          $.each( tabletop.sheets("bottomad").all(), function(i, newsletter4) {
+          var html = template4(newsletter4);
+          $("#bottomad-content").append(html);
+        });
+
+        $.each( tabletop.sheets("editorsnote").all(), function(i, newsletter5) {
+          var html = template5(newsletter5);
+          $("#description-content").append(html);
+        });
+
+
+
+      }
+     
+    </script>
+</body></html>

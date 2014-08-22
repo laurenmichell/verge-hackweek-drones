@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="../common/cats.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>drones</h1>
+    <h1>here is adi's sweet ass guide to drones</h1>
     
-    <div id="content"></div>
+    <div id="content-drone"></div>
     
     <script id="drone-template" type="text/x-handlebars-template">
       <div class="entry">
+        <div class="img" style="background-image:url('{{photo}}');"></div>
         <h2>{{name}}</h2>
-        <h3>Launch year: {{launchyear}}</h3>
-         <h3>Size: {{size}}</h3>
-         <h3>Primary use: {{primaryuse}}</h3>
+        <h3><strong>Launch year:</strong> {{launchyear}}</h3>
+         <h3><strong>Size:</strong> {{size}}</h3>
+         <h3><strong>Primary use:</strong> {{primaryuse}}</h3>
          <h3><a href="" class="more">More information &rarr;</a></h3>
         <div class="body">
           {{{description}}}
         </div>
+      </div>
+
+      <div class="drone_modal" style="display:none;">
+          <div class="img" style="background-image:url('{{photo}}');"></div>
+        <h2>{{name}}</h2>
+        <h3><strong>Launch year:</strong> {{launchyear}}</h3>
+         <h3><strong>Size:</strong> {{size}}</h3>
+         <h3><strong>Primary use:</strong> {{primaryuse}}</h3>
+         <h3><a href="" class="more">More information &rarr;</a></h3>
       </div>
     </script>
 
@@ -40,11 +50,12 @@
 
         $.each( tabletop.sheets("drones").all(), function(i, drone) {
           var html = template(drone);
-          $("#content").append(html);
+          $("#content-drone").append(html);
         });
       }
     
-      document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");    
     </script>
+      <script type="text/javascript" src="http://fonts.sbnation.com/wvq7oai.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </body>
 </html>

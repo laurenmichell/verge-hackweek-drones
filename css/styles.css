@@ -1,3 +1,40 @@
-.entry {
+body {
+  margin: 0px;
+  padding: 80px;
+  background-color: #122944;
+  background-image: url("../img/sky.png");
+  background-attachment: fixed;
+  background-size: 100%; }
+  body h1 {
+    color: #fff; }
+
+#content-drone .entry {
   width: 25%;
-  float: left; }
+  float: left;
+  padding: 20px;
+  color: #fff;
+  font-family: arial;
+  border: 1px solid #316c95;
+  margin: 10px;
+  background: rgba(54, 25, 25, 0.25);
+  height: 220px; }
+  #content-drone .entry a {
+    color: #fa4b2a;
+    text-decoration: none; }
+    #content-drone .entry a:hover {
+      text-decoration: underline; }
+  #content-drone .entry h2 {
+    text-transform: uppercase;
+    color: #fa4b2a; }
+  #content-drone .entry h3 {
+    font-size: 1em;
+    font-weight: normal;
+    font-family: ff-din-web-condensed,helvetica,sans-serif; }
+  #content-drone .entry .img {
+    width: 100px;
+    height: 100px;
+    background-size: 200px auto;
+    background-position: center;
+    float: right;
+    border-radius: 100%;
+    border: 5px solid #fff; }

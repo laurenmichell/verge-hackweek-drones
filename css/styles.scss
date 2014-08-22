@@ -1,4 +1,56 @@
-.entry {
-	width:25%;
-	float:left;
+body {
+	margin:0px;
+	padding:80px;
+	background-color: #122944;
+	background-image: url('../img/sky.png');
+	background-attachment: fixed;
+	background-size: 100%;
+
+	h1 {
+		color:#fff;
+	}
+}
+	#content-drone {
+	.entry {
+		width:25%;
+		float:left;
+		padding:20px;
+		color:#fff;
+		font-family:arial;
+		border:1px solid #316c95;
+		margin:10px;
+		background: rgba(54, 25, 25, .25);
+		height:220px;
+
+		a {
+			color:#fa4b2a;
+			text-decoration:none;
+			&:hover {
+				text-decoration:underline;
+			}
+		}
+
+		h2 {
+			text-transform:uppercase;
+			color:#fa4b2a;
+		}
+
+		h3 {
+			font-size:1em;
+			font-weight:normal;
+			font-family:ff-din-web-condensed,helvetica,sans-serif;
+		}
+
+
+
+		.img {
+			width:100px;
+			height:100px;
+			background-size: 200px auto;
+			background-position: center;
+			float:right;
+			border-radius:100%;
+			border:5px solid #fff;
+		}
+	}
 }

@@ -15,20 +15,21 @@
         <h3><strong>Launch year:</strong> {{launchyear}}</h3>
          <h3><strong>Size:</strong> {{size}}</h3>
          <h3><strong>Primary use:</strong> {{primaryuse}}</h3>
-         <h3><a href="" class="more">More information &rarr;</a></h3>
-        <div class="body">
-          {{{description}}}
-        </div>
+         <a class="more">More information &rarr;</a>
+
+         <div class="drone_modal" style="display:none;">
+           <div>
+             <h2>{{name}}</h2>
+             <h3><strong>Launch year:</strong> {{launchyear}}</h3>
+              <h3><strong>Size:</strong> {{size}}</h3>
+              <h3><strong>Primary use:</strong> {{primaryuse}}</h3>
+              <p>{{{toknow}}}</p>
+          </div>
+         </div> 
+
       </div>
 
-      <div class="drone_modal" style="display:none;">
-          <div class="img" style="background-image:url('{{photo}}');"></div>
-        <h2>{{name}}</h2>
-        <h3><strong>Launch year:</strong> {{launchyear}}</h3>
-         <h3><strong>Size:</strong> {{size}}</h3>
-         <h3><strong>Primary use:</strong> {{primaryuse}}</h3>
-         <h3><a href="" class="more">More information &rarr;</a></h3>
-      </div>
+     
     </script>
 
     <!-- Don't need jQuery for Tabletop, but using it for this example -->
@@ -42,6 +43,7 @@
         Tabletop.init( { key: public_spreadsheet_url,
                          callback: showInfo,
                          parseNumbers: true } );
+
       });
         
       function showInfo(data, tabletop) {
@@ -52,10 +54,17 @@
           var html = template(drone);
           $("#content-drone").append(html);
         });
+
+
+        $( ".more" ).click(function() {
+          $( this ).parent().find(".drone_modal").toggle();
+        });
+        $( ".drone_modal" ).click(function() {
+          $(this).hide();
+        });
       }
     
     </script>
-      <script type="text/javascript" src="http://fonts.sbnation.com/wvq7oai.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
   </body>
 </html>

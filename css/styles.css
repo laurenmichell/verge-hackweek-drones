@@ -38,3 +38,17 @@ body {
     float: right;
     border-radius: 100%;
     border: 5px solid #fff; }
+  #content-drone .entry .drone_modal {
+    background: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    #content-drone .entry .drone_modal div {
+      background: #fff;
+      z-index: 100;
+      padding: 30px;
+      width: 40%;
+      margin: 100px auto;
+      color: #000; }

@@ -2,14 +2,19 @@ body {
   margin: 0px;
   padding: 10%;
   background-color: #122944;
-  background-image: url("../img/sky.png");
-  background-attachment: fixed;
+  background-image: url("../img/drone-bg.jpg");
   background-size: 100%; }
+  body p {
+    color: #fff;
+    font-size: 1.2em;
+    font-family: arial, sans-serif; }
   body h1 {
-    color: #fff; }
+    color: #fff;
+    text-align: center;
+    font-size: 4em; }
 
 #content-drone .entry {
-  width: 25%;
+  width: 40%;
   float: left;
   padding: 20px;
   color: #fff;
@@ -37,7 +42,7 @@ body {
     background-position: center;
     float: right;
     border-radius: 100%;
-    border: 5px solid #fff; }
+    border: 3px solid #fff; }
   #content-drone .entry .drone_modal {
     background: rgba(0, 0, 0, 0.85);
     width: 100%;
